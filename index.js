@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded',submitdata);
 async function submitdata()
 {
-        let len=await fetch(`http://makeup-api.herokuapp.com/api/v1/products.json`);
+        let len=await fetch(`https://makeup-api.herokuapp.com/api/v1/products.json`);
         let lenobj=await len.json();
         //lenobj.length
             for(var i=1;i<=lenobj.length;i++){
                 try{
-                    let response=await fetch(`http://makeup-api.herokuapp.com/api/v1/products/${i}.json`);
+                    let response=await fetch(`https://makeup-api.herokuapp.com/api/v1/products/${i}.json`);
                     let data=await response.json();
                     // console.log(data.id);
                     var divele=document.querySelector(".image");
